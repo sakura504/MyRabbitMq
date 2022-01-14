@@ -1,0 +1,17 @@
+server:
+  port: 9898
+
+spring:
+  rabbitmq:
+    host: 110.42.180.4
+    port: 5672
+    username: testmq
+    password: testmq
+    virtual-host: test
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 5
+          max-interval: 10000
+        acknowledge-mode: auto
